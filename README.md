@@ -15,11 +15,14 @@
 
 ---
 
-## 🚀 Live Working Web Application
+## 🌐 Live Deployed Application
 
-The entire platform is running and accessible via a **single unified entry point**:
-
-👉 **Main Working Application Link**: **[http://localhost:3000](http://localhost:3000)**
+> [!IMPORTANT]
+> ### ⚡ **[SonicEquity Live Web Application](https://agent-6a65b9374fb70db14--dancing-basbousa-1fb1a8.netlify.app/)**
+> 
+> 🔗 **Live URL**: **[https://agent-6a65b9374fb70db14--dancing-basbousa-1fb1a8.netlify.app/](https://agent-6a65b9374fb70db14--dancing-basbousa-1fb1a8.netlify.app/)**
+>
+> 💻 **Local Development Entry Point**: **[http://localhost:3000](http://localhost:3000)**
 
 ---
 
@@ -235,4 +238,5 @@ cargo test --workspace
 ## 📄 License
 
 Distributed under the **MIT License**. See `LICENSE` for details.
+
 
