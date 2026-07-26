@@ -1,0 +1,64 @@
+[workspace]
+members = [
+    "contracts/royalty-split",
+    "contracts/track-registry",
+    "backend/api",
+    "backend/indexer",
+    "cli",
+]
+resolver = "2"
+
+[workspace.dependencies]
+# Soroban
+soroban-sdk = { version = "22.0.0", features = ["testutils"] }
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# Web framework
+axum = { version = "0.8", features = ["ws"] }
+tower = { version = "0.5", features = ["full"] }
+tower-http = { version = "0.6", features = ["cors", "trace", "limit"] }
+
+# Database
+sqlx = { version = "0.8", features = ["sqlite", "runtime-tokio", "macros"] }
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Error handling
+thiserror = "2"
+anyhow = "1"
+
+# HTTP client
+reqwest = { version = "0.12", features = ["json"] }
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# CLI
+clap = { version = "4", features = ["derive"] }
+
+# Config
+dotenvy = "0.15"
+
+# Crypto / encoding
+hex = "0.4"
+
+# Time
+chrono = { version = "0.4", features = ["serde"] }
+
+[profile.release]
+opt-level = "z"
+overflow-checks = true
+debug = false
+strip = true
+lto = true
+codegen-units = 1
+
+[profile.release-with-logs]
+inherits = "release"
+debug = true
+strip = false
